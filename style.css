@@ -1,0 +1,234 @@
+/* --- Общие стили --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: #0f172a;
+    color: #e2e8f0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+}
+
+/* --- Главная и Правила --- */
+h1 {
+    font-size: 2.5rem;
+    color: #38bdf8;
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px rgba(56, 189, 248, 0.5);
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #94a3b8;
+    margin-bottom: 40px;
+}
+
+.menu-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 300px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+    border: none;
+    text-align: center;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.btn-start { background: #22c55e; color: #fff; }
+.btn-rules { background: #475569; color: #fff; }
+.btn-back { background: #334155; color: #fff; width: 100%; max-width: 300px; margin-top: 20px; }
+
+.rules-content {
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: left;
+    max-width: 600px;
+    margin-bottom: 20px;
+    border: 1px solid #334155;
+}
+
+.rules-content ul { padding-left: 20px; margin: 15px 0; }
+.rules-content li { margin-bottom: 10px; color: #cbd5e1; }
+
+/* --- Игра --- */
+.game-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    max-width: 900px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 10px;
+}
+
+.game-header {
+    background: #1e293b;
+    padding: 15px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    border: 1px solid #334155;
+}
+
+.balance, .income { font-size: 1.2rem; font-weight: bold; color: #38bdf8; }
+
+.game-main { display: flex; gap: 20px; flex: 1; flex-direction: column; }
+
+@media (min-width: 768px) {
+    .game-main { flex-direction: row; }
+}
+
+.farm-area {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #1e293b;
+    border-radius: 12px;
+    padding: 20px;
+    border: 1px solid #334155;
+    min-height: 300px;
+}
+
+.clicker-btn {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: radial-gradient(circle, #0ea5e9, #0284c7);
+    border: 5px solid #38bdf8;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.4);
+    transition: transform 0.1s;
+}
+
+.clicker-btn:active { transform: scale(0.95); }
+.coin-icon { font-size: 3rem; margin-bottom: 5px; }
+.hint { margin-top: 15px; color: #94a3b8; font-size: 0.9rem; }
+
+.shop { flex: 1; background: #1e293b; border-radius: 12px; padding: 20px; border: 1px solid #334155; }
+.shop h2 { color: #38bdf8; margin-bottom: 15px; font-size: 1.3rem; }
+
+.shop-item {
+    background: #0f172a;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #334155;
+}
+
+.shop-item-info h3 { font-size: 1.1rem; margin-bottom: 5px; color: #e2e8f0; }
+.shop-item-info p { font-size: 0.8rem; color: #94a3b8; }
+
+.buy-btn {
+    background: #22c55e;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.buy-btn:hover { background: #16a34a; }
+.buy-btn:disabled { background: #475569; cursor: not-allowed; opacity: 0.5; }
+
+.game-footer { display: flex; gap: 10px; margin-top: 20px; justify-content: center; flex-wrap: wrap; }
+footer { text-align: center; padding: 15px; color: #64748b; font-size: 0.9rem; }
+
+/* --- Вход и Регистрация --- */
+.auth-page { justify-content: center; align-items: center; background: #0f172a; }
+
+.auth-container {
+    background: #1e293b;
+    padding: 30px;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border: 1px solid #334155;
+    text-align: center;
+    margin: 20px;
+}
+
+.auth-subtitle { color: #94a3b8; margin-bottom: 25px; font-size: 0.95rem; }
+.auth-form { text-align: left; }
+.auth-form .input-group { margin-bottom: 15px; }
+.auth-form label { display: block; margin-bottom: 5px; color: #cbd5e1; font-size: 0.9rem; }
+
+.auth-form input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #334155;
+    background: #0f172a;
+    color: #e2e8f0;
+    font-size: 1rem;
+    outline: none;
+    transition: border 0.3s;
+}
+
+.auth-form input:focus { border-color: #38bdf8; }
+.password-wrapper { position: relative; }
+.password-wrapper input { padding-right: 45px; }
+
+.eye-btn {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    opacity: 0.7;
+    padding: 5px;
+}
+
+.eye-btn:hover { opacity: 1; }
+.auth-link { margin-top: 15px; color: #94a3b8; font-size: 0.9rem; }
+.auth-link a { color: #38bdf8; text-decoration: none; font-weight: bold; }
+.auth-link a:hover { text-decoration: underline; }
